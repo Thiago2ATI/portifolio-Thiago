@@ -1,0 +1,85 @@
+.portfolio-section {
+    padding: 80px 40px;
+}
+
+.portfolio-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.portfolio-filter button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: var(--color-light-gray);
+}
+
+.portfolio-filter button.active {
+    color: var(--color-black);
+    position: relative;
+}
+
+.portfolio-filter button.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-black);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+    height: 200px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.github-chart {
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .portfolio-item {
+        height: 150px;
+    }
+}

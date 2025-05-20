@@ -1,0 +1,100 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--color-white);
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--color-black);
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--color-black)
+}
+
+
+nav {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.3s ease;
+}
+
+nav a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .theme-toggle-button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-bg-gray);
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+
+.header-buttons-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.open {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--color-bg-gray);
+        right: 0;
+        top: 72px;
+
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        padding: 1rem;
+    }
+
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+    }
+}
